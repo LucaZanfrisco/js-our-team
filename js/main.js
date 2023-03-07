@@ -1,5 +1,20 @@
 "use strict";
 
+// FUNZIONI
+
+function stampaArray(team){
+    for(let i = 0; i < team.length; i++){
+        console.log(`Nome: ${team[i].nome}`);
+        console.log(`Ruolo: ${team[i].ruolo}`);
+        console.log(`Foto: ${team[i].foto}`);
+    }
+}
+
+
+
+
+// MAIN
+
 // Array con all'interno 6 oggetti
 const team = [
   {
@@ -34,4 +49,5 @@ const team = [
   }
 ];
 
-console.log(team);
+stampaArray(team);
+
