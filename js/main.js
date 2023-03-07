@@ -2,15 +2,23 @@
 
 // FUNZIONI
 
+// Funzione che stampa in console i dati dell'array di oggetti
 function stampaArray(team){
     for(let i = 0; i < team.length; i++){
         const teamMember = team[i];
         for(let key in teamMember){
-            console.log(`Membro ${i}: ${teamMember[key]}`)
+            console.log(`Membro ${i+1}: ${teamMember[key]}`)
         }
     }
 }
 
+function creaLista(listaMembri,team){
+    for(let i = 0; i < team.length; i++){
+        const elementoLista = document.createElement('li');
+        elementoLista.innerText = `Nome: ${team[i].nome}, Ruolo: ${team[i].ruolo}, Foto: ${team[i].foto}`;
+        listaMembri.append(elementoLista);
+    }
+}
 
 
 
@@ -51,4 +59,8 @@ const team = [
 ];
 
 stampaArray(team);
+console.log(Object.keys(team).length);
 
+const listaMembri = document.querySelector('.lista-membri');
+
+creaLista(listaMembri,team);
