@@ -4,9 +4,10 @@
 
 function stampaArray(team){
     for(let i = 0; i < team.length; i++){
-        console.log(`Nome: ${team[i].nome}`);
-        console.log(`Ruolo: ${team[i].ruolo}`);
-        console.log(`Foto: ${team[i].foto}`);
+        const teamMember = team[i];
+        for(let key in teamMember){
+            console.log(`Membro ${i}: ${teamMember[key]}`)
+        }
     }
 }
 
